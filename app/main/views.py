@@ -7,23 +7,22 @@ from . import main
 def index():
 
     '''
-    View root page function that returns the index page and its data
+    View page function that returns the index page and its data
     '''
-    title = 'Mercurial News Highlights'
+    title = 'Pitch Perfect'
 
     return render_template('index.html', title=title)
 
 
-@main.route('/highlights/bbc')
+@main.route('/profile')
 def bbc():
 
     '''
-    View root page function that returns the bbc highlights page and its data
+    View page function that returns the profile page and its data
     '''
 
-    bbc_news = get_bbc_news()
-    print(bbc_news)
+    title = 'Pitch Perfect'
     title = 'Mercurial News Highlights'
 
-    return render_template('bbc-highlights.html', title=title, bbc_news=bbc_news)
+    return render_template('profile.html', title=title)
 
