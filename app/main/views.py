@@ -22,7 +22,6 @@ def bbc():
     '''
 
     title = 'Pitch Perfect'
-    title = 'Mercurial News Highlights'
-
+    
     return render_template('profile.html', title=title)
 

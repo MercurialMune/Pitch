@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Pitch Perfect </title>
+    {% endif %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
-
-<p>display some stuff</p>
-
+<div class="w3-container w3-center">
+<h1>display some stuff</h1>
+</div>
 </body>
 </html>
