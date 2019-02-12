@@ -1,1 +1,2 @@
-# SECRET_KEY = '<Flask WTF Secret Key>'
+SECRET_KEY = 'averysecretkey'
+WTF_CSRF_SECRET_KEY="a csrf secret key"

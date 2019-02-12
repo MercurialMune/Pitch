@@ -1,10 +1,13 @@
 import os
 
+
 class Config:
     '''
     General configuration parent class
     '''
 
+    SECRET_KEY = 'averysecretkey'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:mercurial92@localhost/pitchusers'
     pass
 
 

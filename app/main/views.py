@@ -17,7 +17,7 @@ def index():
 
 
 @main.route('/profile')
-def bbc():
+def profile():
 
     '''
     View page function that returns the profile page and its data
@@ -28,17 +28,18 @@ def bbc():
     return render_template('profile.html', title=title)
 
 
-@main.route('/movie/review/new/<int:id>', methods = ['GET','POST'])
-def new_login(id):
+@main.route('/login', methods = ['GET','POST'])
+def login():
     form = LoginForm()
 
-    if form.validate_on_submit():
-        title = form.title.data
-        review = form.review.data
-        new_review = Review(movie.id,title,movie.poster,review)
-        new_review.save_review()
-        return redirect(url_for('profile.html'))
+    title = 'Pitch Perfect'
+    return render_template('login.html', title = title, form=form)
 
-    title = f'{movie.title} review'
-    return render_template('new_review.html',title = title, review_form=form, movie=movie)
+
+@main.route('/register', methods = ['GET','POST'])
+def register():
+    form = RegisterForm()
+
+    title = 'Pitch Perfect'
+    return render_template('login.html', title = title, form=form)
 

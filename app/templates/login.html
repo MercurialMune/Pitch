@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+{% import "bootstrap/wtf.html" as wtf %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Pitch Perfect </title>
+    {% endif %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 </head>
 <body>
-<div class="w3-card w3-center">
-{{ wtf.quick_form(login_form)}}
+<div class="w3-container"><br><br><br>
+<div class="w3-card-4 w3-center" style="width:50%; margin-left:auto; margin-right:auto">
+<div class="container w3-margin w3-padding">
+{{wtf.quick_form(form)}}<br>
+</div>
+</div>
 </div>
 </body>
 </html>
