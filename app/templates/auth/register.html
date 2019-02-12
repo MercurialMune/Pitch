@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 </head>
 <body>
-<div class="w3-container"><br><br><br>
-<div class="w3-card-4 w3-center" style="width:50%; margin-left:auto; margin-right:auto">
-<div class="container w3-margin w3-padding">
-{{wtf.quick_form(form)}}<br>
+<div class="container">
+<div class="row">
+<div class="col-md-2"> </div>
+<div class="col-md-8">
+
+{{wtf.quick_form(registration_form)}}
+
 </div>
+<div class="col-md-2"></div>
 </div>
 </div>
 </body>

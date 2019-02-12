@@ -1,16 +1,19 @@
 from . import db
 from werkzeug.security import generate_password_hash,check_password_hash
+from flask_login import UserMixin
+from . import login_manager
 
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     '''
         News class to define User Objects
         '''
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(255))
-    email = db.Column(db.String(255))
+    username = db.Column(db.String(255),index = True)
+    email = db.Column(db.String(255),index = True)
     pass_secure = db.Column(db.String(255))
+    password_hash = db.Column(db.String(255))
 
     @property
     def password(self):
@@ -26,6 +29,10 @@ class User(db.Model):
     def __repr__(self):
         return f'User {self.username, self.password, self.email}'
 
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
 
 class Pitch:
     '''
@@ -34,25 +41,3 @@ class Pitch:
 
     def __init__(self, id):
         self.id= id
-
-
-
-
-#
-# class Login:
-#     '''
-#         News class to define User Objects
-#         '''
-#     def __init__(self, username, password):
-#         self.username = username
-#         self.password = password
-#
-#
-# class Register:
-#     '''
-#         News class to define User Objects
-#         '''
-#     def __init__(self, email, username, password):
-#         self.email = email
-#         self.username = username
-#         self.password = password

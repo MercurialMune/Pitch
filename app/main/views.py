@@ -2,6 +2,7 @@ from flask import render_template
 from . import main
 # from ..models import user
 from.forms import LoginForm, RegisterForm
+from flask_login import login_required
 
 
 # Views
@@ -28,18 +29,19 @@ def profile():
     return render_template('profile.html', title=title)
 
 
-@main.route('/login', methods = ['GET','POST'])
-def login():
-    form = LoginForm()
-
-    title = 'Pitch Perfect'
-    return render_template('login.html', title = title, form=form)
-
-
-@main.route('/register', methods = ['GET','POST'])
-def register():
-    form = RegisterForm()
-
-    title = 'Pitch Perfect'
-    return render_template('login.html', title = title, form=form)
-
+# @main.route('/login', methods = ['GET','POST'])
+# # @login_required
+# def login():
+#     logform = LoginForm()
+#
+#     title = 'Pitch Perfect'
+#     return render_template('login.html', title = title, logform=logform)
+#
+#
+# @main.route('/register', methods = ['GET','POST'])
+# def register():
+#     regform = RegisterForm()
+#
+#     title = 'Pitch Perfect'
+#     return render_template('register.html', title = title, regform=regform)
+#
