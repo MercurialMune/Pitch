@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-      <div class= "col-md-2"> </div>
-      <div class="col-md-8">
+<div class="w3-container">
       <!--Flash message -->
       {% for message in get_flashed_messages() %}
-        <div class="alert alert-danger">
+    <div class="w3-card">
+        <div class="w3-red w3-button">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{ message }}
         </div>
@@ -26,8 +24,7 @@
       {{wtf.quick_form(login_form)}}
       <p> Don't have an account? <a href="{{url_for('auth.register')}}">Sign up here</a></p>
      </div>
-     <div clas="col-md-2"> </div>
-    </div>
 </div>
+
 </body>
 </html>
