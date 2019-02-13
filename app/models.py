@@ -12,6 +12,8 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(255),index = True)
     email = db.Column(db.String(255),index = True)
+    bio = db.Column(db.String(255))
+    profile_pic_path = db.Column(db.String())
     pass_secure = db.Column(db.String(255))
     password_hash = db.Column(db.String(255))
 
@@ -34,10 +36,3 @@ class User(UserMixin, db.Model):
         return User.query.get(int(user_id))
 
 
-class Pitch:
-    '''
-    News class to define Pitch Objects
-    '''
-
-    def __init__(self, id):
-        self.id= id

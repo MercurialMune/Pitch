@@ -1,6 +1,6 @@
-from flask import render_template
+from flask import render_template,request,redirect,url_for,abort
 from . import main
-# from ..models import user
+from ..models import User
 from.forms import LoginForm, RegisterForm
 from flask_login import login_required
 
@@ -17,31 +17,12 @@ def index():
     return render_template('index.html', title=title)
 
 
-@main.route('/profile')
-def profile():
+@main.route('/user/<uname>')
+def profile(uname):
+    user = User.query.filter_by(username = uname).first()
 
-    '''
-    View page function that returns the profile page and its data
-    '''
+    if user is None:
+        abort(404)
 
-    title = 'Pitch Perfect'
-    
-    return render_template('profile.html', title=title)
+    return render_template("profile/profile.html", user = user)
 
-
-# @main.route('/login', methods = ['GET','POST'])
-# # @login_required
-# def login():
-#     logform = LoginForm()
-#
-#     title = 'Pitch Perfect'
-#     return render_template('login.html', title = title, logform=logform)
-#
-#
-# @main.route('/register', methods = ['GET','POST'])
-# def register():
-#     regform = RegisterForm()
-#
-#     title = 'Pitch Perfect'
-#     return render_template('register.html', title = title, regform=regform)
-#
