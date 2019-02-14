@@ -3,32 +3,73 @@
 {% block content %}
 
 
-<div class="w3-card">
-    <!-- displaying  Username-->
-    <h3> {{user.username| capitalize}} </h3>
-    <!--Displaying user bio-->
-    {% if user.bio %}
-      <p> {{user.bio}}</p>
-    {%else%}
-      <p> {{user.username| capitalize}} has no bio </p>
-    {% endif %}
-</div>
-<!--Display profile photo-->
-<div class="w3-card">
-{% if user.profile_pic_path %}
-<img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
-{%else%}
-<p>No profile picture</p>
-{% endif %}
+<!--<div class="w3-card">-->
+    <!--&lt;!&ndash; displaying  Username&ndash;&gt;-->
+    <!--<h3> {{user.username| capitalize}} </h3>-->
+    <!--&lt;!&ndash;Displaying user bio&ndash;&gt;-->
+    <!--{% if user.bio %}-->
+      <!--<p> {{user.bio}}</p>-->
+    <!--{%else%}-->
+      <!--<p> {{user.username| capitalize}} has no bio </p>-->
+    <!--{% endif %}-->
+<!--</div>-->
+<!--&lt;!&ndash;Display profile photo&ndash;&gt;-->
+<!--<div class="w3-card">-->
+<!--{% if user.profile_pic_path %}-->
+<!--<img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">-->
+<!--{%else%}-->
+<!--<p>No profile picture</p>-->
+<!--{% endif %}-->
 
-{% if user == current_user %}
-<form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">
-  <input type="file"  name="photo" class="form-control" required>
-  <input type="submit">
-</form>
-<a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
-  {% endif %}
-</div>
+<!--{% if user == current_user %}-->
+<!--<form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">-->
+  <!--<input type="file"  name="photo" class="form-control" required>-->
+  <!--<input type="submit">-->
+<!--</form>-->
+<!--<a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>-->
+  <!--{% endif %}-->
+<!--</div>-->
+
+<!-- Page Container -->
+<div class="w3-content " style="max-width:1400px; margin-top:30px">
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Jane Doe</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
+          <hr>
+        </div>
+      </div><br>
+
+
+    </div>
+
+    <div class="w3-twothird">
+        <div class="w3-container w3-card w3-white w3-margin-bottom" style="height:50vh">
+            <h2 class="w3-text-grey w3-padding-16 w3-center">Pitches</h2>
+            <div class="w3-panel w3-green w3-card-4 w3-margin w3-padding">
+              <h3>Do It Now</h3>
+                <hr>
+                <p>You gotta do what you want at this time because if you dint, then something something...</p>
+            </div>
+        </div>
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+
+
 
 {% endblock%}
 

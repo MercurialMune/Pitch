@@ -9,10 +9,11 @@
     {% endif %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/lbkd0aAnKL1AL0tyIXSdgQKNe5mGO7w3DXJDONY35pF2qsm1tJOpZF5N2P7_kxXPYg=w300-rw" />
 </head>
 <body>
-<div class="w3-bar w3-black">
-  <a href="#" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
+<div class="w3-bar w3-black w3-card">
+  <a href="{{url_for('main.index')}}" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
     {% if current_user.is_authenticated %}
   <a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button w3-mobile">Log Out</a>
     {% else %}
@@ -44,7 +45,7 @@
 
     <!--<br>-->
 <!--</div>-->
-<div class="w3-container w3-grey" style="min-height:100vh">
+<div class="w3-container w3-grey" style="min-height:94vh">
 
 {% block content %}
 
