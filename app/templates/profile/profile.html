@@ -27,13 +27,13 @@
           <hr>
 
             {% if user == current_user %}
-            <div class="w3-center" action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">
+            <form class="w3-center" action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">
             <input type="file"  name="photo"  required>
             <input class="w3-bar-item w3-button w3-green" type="submit">
 
             <a class="w3-button w3-black w3-margin" href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
             {% endif %}
-            </div>
+            </form>
 
             </div>
 
