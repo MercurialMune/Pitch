@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% import 'bootstrap/wtf.html' as wtf %}
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Pitch Perfect </title>
+    {% endif %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
-<div class="container">
-<div class="row">
-<!-- displaying  Username-->
-  <div class="col-md-4">
-    <h3> {{user.username| capitalize}} </h3>
 
+
+<div class="w3-sidebar w3-bar-block w3-center" style="width:10%; top:15%">
+    <hr>
+    <p>{{current_user.username}}</p>
+    <hr>
+    <br>
+    <a href="{{url_for('main.profile',uname=current_user.username)}}" class="w3-bar-item w3-button">Profile</a>
+    <a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button">Logout</a>
+    <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button">Login</a>
+    <hr>
+    <br>
+    <br>
+</div>
+
+<div class="w3-container w3-black" style="margin-left:10%;min-height:100vh">
+<div class="w3-card">
+    <!-- displaying  Username-->
+    <h3> {{user.username| capitalize}} </h3>
     <!--Displaying user bio-->
     {% if user.bio %}
       <p> {{user.bio}}</p>
     {%else%}
       <p> {{user.username| capitalize}} has no bio </p>
     {% endif %}
-  </div>
-
-  <!--Display profile photo-->
-  <div class="col-md-4">
-
-    {% if user.profile_pic_path %}
-    <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
-    {%else%}
-    <p>No profile picture</p>
-    {% endif %}
-
-    {% if user == current_user %}
-    <form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype = "multipart/form-data">
-
-      <input type="file"  name="photo" class="form-control" required>
-      <input type="submit">
-    </form>
-      {% endif %}
-
-
-  </div>
-    {% if user == current_user %}
-    <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+</div>
+<!--Display profile photo-->
+<div class="w3-card">
+{% if user.profile_pic_path %}
+<img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
+{%else%}
+<p>No profile picture</p>
 {% endif %}
-</div>
-</div>
 
+{% if user == current_user %}
+<form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">
+  <input type="file"  name="photo" class="form-control" required>
+  <input type="submit">
+</form>
+<a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+  {% endif %}
+</div>
+</div>
 
 </body>
 </html>

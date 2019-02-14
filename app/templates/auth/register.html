@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-{% import "bootstrap/wtf.html" as wtf %}
 <head>
-    <meta charset="UTF-8">
+    {% import 'bootstrap/wtf.html' as wtf %}
     {% if title %}
     <title> {{ title }}</title>
     {% else %}
     <title> Pitch Perfect </title>
     {% endif %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <meta charset="UTF-8">
 </head>
 <body>
-<div class="container">
-<div class="row">
-<div class="col-md-2"> </div>
-<div class="col-md-8">
 
+
+<div class="w3-sidebar w3-bar-block w3-center" style="width:10%; top:15%">
+    <hr>
+    <p>{{current_user.username}}</p>
+    <hr>
+    <br>
+    <a href="{{url_for('main.profile',uname=current_user.username)}}" class="w3-bar-item w3-button">Profile</a>
+    <a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button">Logout</a>
+    <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button">Login</a>
+    <hr>
+    <br>
+    <br>
+</div>
+
+<div class="w3-container" style="margin-left:10%;">
 {{wtf.quick_form(registration_form)}}
+</div>
 
-</div>
-<div class="col-md-2"></div>
-</div>
-</div>
+
 </body>
 </html>

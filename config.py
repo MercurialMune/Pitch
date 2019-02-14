@@ -11,11 +11,11 @@ class Config:
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     #  email configurations
-    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_USERNAME = 'munenecyp@gmail.com'
+    MAIL_PASSWORD = 'munene12345678'
 
     pass
 
