@@ -2,34 +2,6 @@
 
 {% block content %}
 
-
-<!--<div class="w3-card">-->
-    <!--&lt;!&ndash; displaying  Username&ndash;&gt;-->
-    <!--<h3>  </h3>-->
-    <!--&lt;!&ndash;Displaying user bio&ndash;&gt;-->
-    <!--{% if user.bio %}-->
-      <!--<p> {{user.bio}}</p>-->
-    <!--{%else%}-->
-      <!--<p> {{user.username| capitalize}} has no bio </p>-->
-    <!--{% endif %}-->
-<!--</div>-->
-<!--&lt;!&ndash;Display profile photo&ndash;&gt;-->
-<!--<div class="w3-card">-->
-<!--{% if user.profile_pic_path %}-->
-<!--<img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">-->
-<!--{%else%}-->
-<!--<p>No profile picture</p>-->
-<!--{% endif %}-->
-
-<!--{% if user == current_user %}-->
-<!--<form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">-->
-  <!--<input type="file"  name="photo" class="form-control" required>-->
-  <!--<input type="submit">-->
-<!--</form>-->
-<!--<a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>-->
-  <!--{% endif %}-->
-<!--</div>-->
-
 <!-- Page Container -->
 <div class="w3-content " style="max-width:1400px; margin-top:30px">
   <!-- The Grid -->
@@ -52,11 +24,20 @@
             {%else%}
           <p><i class="w w3-margin-right w3-large w3-text-teal"></i>No Bio Yet</p>
             {% endif %}
-
-
           <hr>
 
-        </div>
+            {% if user == current_user %}
+            <div class="w3-center" action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype ="multipart/form-data">
+            <input type="file"  name="photo"  required>
+            <input class="w3-bar-item w3-button w3-green" type="submit">
+
+            <a class="w3-button w3-black w3-margin" href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+            {% endif %}
+            </div>
+
+            </div>
+
+
       </div><br>
 
 
@@ -64,19 +45,23 @@
 
     <div class="w3-twothird">
         <div class="w3-container w3-card w3-white w3-margin-bottom" style="height:100%">
-            <h3>All Categories</h3>
+            <h3 class="w3-center">All Categories</h3>
             <div class="w3-panel w3-green w3-card-4 w3-margin w3-padding">
-              <h3>Consultation</h3>
+              <h3>Consultation Pitch</h3>
                 <hr>
-                <p>I’ve spent a lot of time looking into the consulting industry and have reached out and spoken to four different alums in the consulting industry about their jobs and what it takes to be successful. I believe my interests and skills are a good match for this business. I have a 3.5 GPA in Management and Marketing at the University of Northern Colorado’s Monfort College of Business. I have also done well on qualitative team projects including a political science class in which we developed political party platform recommendations to account for changing demographics. Last semester, I did an independent project writing a business plan for an elder care non-profit that I’d had some exposure to through a neighbor, and the organization has begun to enact several of my recommendations. As this brief background illustrates, I enjoy analyzing key performance drivers, and have pursued academic and extra-curricular opportunities to develop skills in this area. I believe that I am a great fit for your organization and I would appreciate the opportunity to meet with you and learn more about your role at this company and discuss various prospects within the organization.</p>
-            <button class="w3-button w3-yellow">Upvote</button><button class="w3-button w3-yellow">Downvote</button>
+                <p>I’ve spent a lot of time looking into the consulting industry and have reached out and spoken to four different alums in the consulting industry about their jobs and what it takes to be successful. Last semester, I did an independent project writing a business plan for an elder care non-profit that I’d had some exposure to through a neighbor, and the organization has begun to enact several of my recommendations. As this brief background illustrates, I enjoy analyzing key performance drivers, and have pursued academic and extra-curricular opportunities to develop skills in this area. I believe that I am a great fit for your organization and I would appreciate the opportunity to meet with you and learn more about your role at this company and discuss various prospects within the organization.</p>
+            <div class="w3-bar w3-center">
+        <i class="material-icons w3-button w3-margin">thumb_up</i> <i class="material-icons w3-button w3-margin">thumb_down</i>
+    </div>
             </div>
 
             <div class="w3-panel w3-green w3-card-4 w3-margin w3-padding">
-              <h3>Consultation</h3>
+              <h3>Elevator Pitch</h3>
                 <hr>
                 <p>I’ve spent a lot of time looking into the consulting industry and talking to consultants about their jobs and what it takes to be successful. I believe my interests and skills are a good match for consulting. I have always liked solving problems. My major project during my internship last summer involved creating a questionnaire and conducting dozens of interviews of store operators to develop a best practices manual for franchise owners. I have a 3.7 GPA in Marketing at the University of Northern Colorado’s Monfort College of Business and have done very well in the more analytical courses I’ve taken, including Econometrics and Symbolic Logic. In those classes and others I’ve worked on teams, but I am also a member of the student council and have a good understanding of the importance of working with others to get the job done. I appreciate your willingness to introduce me to Jane Doe at (consulting firm). </p>
-            <button class="w3-button w3-yellow">Upvote</button><button class="w3-button w3-yellow">Downvote</button>
+            <div class="w3-bar w3-center">
+        <i class="material-icons w3-button w3-margin">thumb_up</i> <i class="material-icons w3-button w3-margin">thumb_down</i>
+    </div>
             </div>
             <br>
         </div>

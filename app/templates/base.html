@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/lbkd0aAnKL1AL0tyIXSdgQKNe5mGO7w3DXJDONY35pF2qsm1tJOpZF5N2P7_kxXPYg=w300-rw" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body style="font-family:  sans-serif">
@@ -25,9 +26,9 @@
   <div class="w3-dropdown-hover w3-mobile">
     <button class="w3-button">Categories<i class="fa fa-caret-down"></i></button>
     <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-      <a href="#" class="w3-bar-item w3-button w3-mobile">Business</a>
-      <a href="#" class="w3-bar-item w3-button w3-mobile">Entertainment</a>
-      <a href="#" class="w3-bar-item w3-button w3-mobile">School</a>
+      <a href="{{url_for('main.business')}}" class="w3-bar-item w3-button w3-mobile">Business</a>
+      <a href="{{url_for('main.entertainment')}}" class="w3-bar-item w3-button w3-mobile">Entertainment</a>
+      <a href="{{url_for('main.school')}}" class="w3-bar-item w3-button w3-mobile">School</a>
     </div>
       {%endif%}
   </div>
