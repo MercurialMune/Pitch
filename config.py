@@ -7,7 +7,6 @@ class Config:
     '''
 
     SECRET_KEY = 'averysecretkey'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:mercurial92@localhost/pitchusers'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     #  email configurations
@@ -27,7 +26,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 
 class DevConfig(Config):
@@ -37,6 +36,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
+    pass
 
     DEBUG = True
 
