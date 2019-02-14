@@ -11,10 +11,26 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div class="w3-bar w3-black">
+  <a href="#" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
+    {% if current_user.is_authenticated %}
+  <a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button w3-mobile">Log Out</a>
+    {% else %}
+  <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button w3-mobile">Log In</a>
+    {%endif%}
+  <div class="w3-dropdown-hover w3-mobile">
+    <button class="w3-button">Categories<i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+      <a href="#" class="w3-bar-item w3-button w3-mobile">Business</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile">Entertainment</a>
+      <a href="#" class="w3-bar-item w3-button w3-mobile">School</a>
+    </div>
+  </div>
+</div>
 
 
-<div class="w3-sidebar w3-bar-block w3-center w3-black" style="width:10%; top:15%">
-    <br>
+<!--<div class="w3-sidebar w3-bar-block w3-center" style="width:10%">-->
+    <!--<br>-->
     <!--{% if current_user.is_authenticated %}-->
     <!--<p>{{current_user.username}}</p>-->
     <!--<br>-->
@@ -26,9 +42,9 @@
     <!--{%endif%}-->
     <!--<br>-->
 
-    <br>
-</div>
-<div class="w3-container" style="margin-left:10%;min-height:100vh">
+    <!--<br>-->
+<!--</div>-->
+<div class="w3-container w3-grey" style="min-height:100vh">
 
 {% block content %}
 
