@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ca09407-6c41-4bc1-962f-c3f9ce64f9b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/test_pitch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_pitch.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pitch.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,44 +18,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_pitch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/main/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Procfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -68,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="611">
+              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -77,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="60">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -170,19 +137,19 @@
         <option value="$PROJECT_DIR$/app/templates/profile/update.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/start.sh" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/app/templates/profile/profile.html" />
         <option value="$PROJECT_DIR$/app/main/forms.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/tests/test_pitch.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="684" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="683" />
     <option name="y" value="27" />
-    <option name="width" value="682" />
+    <option name="width" value="683" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectView">
@@ -232,9 +199,9 @@
       <recent name="$PROJECT_DIR$/app/static/css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/app/auth" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/static/css" />
     </key>
   </component>
@@ -265,7 +232,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_user.UserModelTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_pitch.PitchModelTest.test_check_instance_variables" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Pitch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,7 +242,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_user.UserModelTest&quot;" />
+      <option name="_new_target" value="&quot;test_pitch.PitchModelTest.test_check_instance_variables&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -324,10 +291,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests for test_pitch.PitchModelTest" />
+        <item itemvalue="Python tests.Unittests for test_pitch.PitchModelTest.test_check_instance_variables" />
         <item itemvalue="Python tests.Unittests for test_user.UserModelTest.test_password_verification" />
         <item itemvalue="Python tests.Unittests for test_user.UserModelTest.test_no_access_password" />
         <item itemvalue="Python tests.Unittests in test_user.py" />
-        <item itemvalue="Python tests.Unittests for test_user.UserModelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -345,15 +312,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_user_UserModelTest_test_password_setter - 2019.02.12 at 16h 40m 25s.xml">
-      <configuration name="Unittests for test_user.UserModelTest.test_password_setter" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_user_UserModelTest - 2019.02.12 at 16h 40m 31s.xml">
-      <configuration name="Unittests for test_user.UserModelTest" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_user_UserModelTest - 2019.02.12 at 16h 40m 54s.xml">
-      <configuration name="Unittests for test_user.UserModelTest" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_user_py - 2019.02.12 at 16h 41m 01s.xml">
       <configuration name="Unittests in test_user.py" configurationId="tests" />
     </history-entry>
@@ -369,23 +327,38 @@
     <history-entry file="Unittests_for_test_pitch_PitchModelTest - 2019.02.15 at 02h 05m 11s.xml">
       <configuration name="Unittests for test_pitch.PitchModelTest" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_test_pitch_PitchModelTest - 2019.02.15 at 02h 06m 41s.xml">
+      <configuration name="Unittests for test_pitch.PitchModelTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_pitch_PitchModelTest - 2019.02.15 at 02h 16m 52s.xml">
+      <configuration name="Unittests for test_pitch.PitchModelTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_pitch_PitchModelTest - 2019.02.15 at 02h 19m 28s.xml">
+      <configuration name="Unittests for test_pitch.PitchModelTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_pitch_PitchModelTest_test_check_instance_variables - 2019.02.15 at 02h 19m 34s.xml">
+      <configuration name="Unittests for test_pitch.PitchModelTest.test_check_instance_variables" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_pitch_PitchModelTest - 2019.02.15 at 02h 20m 08s.xml">
+      <configuration name="Unittests for test_pitch.PitchModelTest" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16902457" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1787044" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289256" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289256" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.90413225" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49848485" weight="0.20991735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49848485" visible="true" weight="0.36198348" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50151515" side_tool="true" weight="0.23305786" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3289256" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -620,23 +593,6 @@
     <entry file="file://$PROJECT_DIR$/start.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/profile/update.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -680,17 +636,37 @@
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="745">
-          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_pitch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

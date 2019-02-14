@@ -16,7 +16,8 @@ class Config:
     MAIL_USERNAME = 'munenecyp@gmail.com'
     MAIL_PASSWORD = 'munene12345678'
 
-    pass
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:mercurial92@localhost/pitchusers_test'
 
 
 class ProdConfig(Config):
@@ -43,5 +44,6 @@ class DevConfig(Config):
 
 config_options = {
 'development':DevConfig,
-'production':ProdConfig
+'production':ProdConfig,
+'test':TestConfig
 }
