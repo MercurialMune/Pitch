@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/x-icon" href="https://lh3.googleusercontent.com/lbkd0aAnKL1AL0tyIXSdgQKNe5mGO7w3DXJDONY35pF2qsm1tJOpZF5N2P7_kxXPYg=w300-rw" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-<body>
+<body style="font-family:  sans-serif">
 <div class="w3-bar w3-black w3-card">
   <a href="{{url_for('main.index')}}" class="w3-bar-item w3-button w3-mobile w3-green">Home</a>
     {% if current_user.is_authenticated %}
@@ -19,6 +21,7 @@
     {% else %}
   <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button w3-mobile">Log In</a>
     {%endif%}
+    {% if current_user.is_authenticated %}
   <div class="w3-dropdown-hover w3-mobile">
     <button class="w3-button">Categories<i class="fa fa-caret-down"></i></button>
     <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
@@ -26,25 +29,12 @@
       <a href="#" class="w3-bar-item w3-button w3-mobile">Entertainment</a>
       <a href="#" class="w3-bar-item w3-button w3-mobile">School</a>
     </div>
+      {%endif%}
   </div>
+
 </div>
 
 
-<!--<div class="w3-sidebar w3-bar-block w3-center" style="width:10%">-->
-    <!--<br>-->
-    <!--{% if current_user.is_authenticated %}-->
-    <!--<p>{{current_user.username}}</p>-->
-    <!--<br>-->
-    <!--<hr>-->
-    <!--<a href="{{url_for('main.profile',uname=current_user.username)}}" class="w3-bar-item w3-button">Profile</a>-->
-    <!--<a href="{{url_for('auth.logout')}}" class="w3-bar-item w3-button">Logout</a>-->
-    <!--{% else %}-->
-    <!--<a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button">Login</a>-->
-    <!--{%endif%}-->
-    <!--<br>-->
-
-    <!--<br>-->
-<!--</div>-->
 <div class="w3-container w3-grey" style="min-height:94vh">
 
 {% block content %}
